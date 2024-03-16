@@ -25,7 +25,8 @@ public:
 
 	void SetState(int state) { this->state = state; }
 	int GetState() { return this->state; }
-
+	float GetSpeedVx() { return vx; }
+	float GetSpeedVy() { return vy; }
 	float GetX() { return x; }
 	float GetY() { return y; }
 

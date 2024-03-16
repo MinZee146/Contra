@@ -31,7 +31,7 @@ HOW TO INSTALL Microsoft.DXSDK.D3DX
 #include <dinput.h>
 #include "Sprite.h"
 #include "Sprites.h"
-
+#include "Map.h"
 #include "Animation.h"
 #include "Animations.h"
 
@@ -45,7 +45,7 @@ HOW TO INSTALL Microsoft.DXSDK.D3DX
 
 #define TEXTURES_DIR L"Texture"
 #define TEXTURE_PATH_BILL TEXTURES_DIR "\\contra2-transparent.png"
-
+#define TEXTURE_PATH_MAP1 TEXTURES_DIR "\\__ContraMapStage1BG.png"
 
 #define BACKGROUND_COLOR D3DXCOLOR(255.0f/255, 255.0f/255, 255.0f/255, 0.0f)
 
@@ -53,8 +53,9 @@ HOW TO INSTALL Microsoft.DXSDK.D3DX
 #define SCREEN_HEIGHT 240
 
 CBill* bill = NULL;
+CMap* map = NULL;
 #define BILL_START_X 100.0f
-#define BILL_START_Y 160.0f
+#define BILL_START_Y 100.0f
 CSampleKeyHandler* keyHandler;
 vector<LPGAMEOBJECT> objects;
 
@@ -82,12 +83,14 @@ void LoadResources()
 	CTextures* textures = CTextures::GetInstance();
 
 	textures->Add(0, TEXTURE_PATH_BILL);
+	textures->Add(10, TEXTURE_PATH_MAP1);
 	//textures->Add(ID_ENEMY_TEXTURE, TEXTURE_PATH_ENEMIES, D3DCOLOR_XRGB(156, 219, 239));
 
 
 	CSprites* sprites = CSprites::GetInstance();
 
 	LPTEXTURE texBill = textures->Get(0);
+	LPTEXTURE texMap = textures->Get(10);
 
 	// readline => id, left, top, right 
 	//RUN RIGHT
@@ -116,6 +119,8 @@ void LoadResources()
 	sprites->Add(10024, 742, 26, 742 + 23, 26 + 33, texBill);
 	//INDLE LEFT
 	sprites->Add(10025, 1303, 26, 1303 + 23, 26 + 33, texBill);
+
+	sprites->Add(10050, 0, 0, 3328, 240, texMap);
 	CAnimations* animations = CAnimations::GetInstance();
 	LPANIMATION ani;
 
@@ -162,12 +167,15 @@ void LoadResources()
 	animations->Add(ID_ANI_BILL_IDLE_LEFT, ani);
 
 	bill = new CBill(BILL_START_X, BILL_START_Y);
+	map = new CMap(0, 240, SCREEN_WIDTH, SCREEN_HEIGHT);
+	map->setMap(sprites->Get(10050));
 }
 void Update(DWORD dt)
 {
 	//CGame::GetInstance()->GetCurrentScene()->Update(dt);
 	// Demo
 	bill->Update(dt);
+	map->Update(dt, bill);
 }
 
 /*
@@ -193,6 +201,7 @@ void Render()
 		FLOAT NewBlendFactor[4] = { 0,0,0,0 };
 		pD3DDevice->OMSetBlendState(g->GetAlphaBlending(), NewBlendFactor, 0xffffffff);
 
+		map->Render();
 		bill->Render();
 
 		// Uncomment this line to see how to draw a porttion of a texture  

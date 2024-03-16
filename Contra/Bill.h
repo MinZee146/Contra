@@ -1,7 +1,6 @@
 #pragma once
 
 #include "GameObject.h"
-
 #include "Animation.h"
 #include "Animations.h"
 
@@ -10,7 +9,7 @@
 #define BILL_RUN_SPEED 0.15f
 #define BILL_JUMP_SPEED 0.5f
 
-#define BILL_GRAVITY 0.001f
+#define BILL_GRAVITY 0.0025f
 
 #define BILL_STATE_IDLE 0
 #define BILL_STATE_RUNNING_RIGHT 100
@@ -34,7 +33,7 @@
 #define ID_ANI_LYING_RIGHT 800
 #define ID_ANI_LYING_LEFT 801
 
-#define GROUND_Y 160.0f
+#define GROUND_Y 100.0f
 
 #define BILL_LIE_HEIGHT_ADJUST 4.0f
 class CBill : public CGameObject
@@ -43,6 +42,7 @@ protected:
 	BOOLEAN isLying;
 	float vx;
 public:
+	
 	CBill(float x, float y) :CGameObject(x, y) {
 		isLying = false;
 		vx = 0.0f;
