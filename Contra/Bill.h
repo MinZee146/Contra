@@ -6,7 +6,7 @@
 
 #define BILL_WIDTH 14
 
-#define BILL_RUN_SPEED 0.15f
+#define BILL_RUN_SPEED 0.1f
 #define BILL_JUMP_SPEED 0.5f
 
 #define BILL_GRAVITY 0.0025f
@@ -35,7 +35,7 @@
 
 #define GROUND_Y 100.0f
 
-#define BILL_LIE_HEIGHT_ADJUST 4.0f
+#define BILL_LIE_HEIGHT_ADJUST 10.0f
 class CBill : public CGameObject
 {
 protected:
