@@ -92,7 +92,7 @@ void LoadResources()
 	LPTEXTURE texBill = textures->Get(0);
 	LPTEXTURE texMap = textures->Get(10);
 
-	// readline => id, left, top, right 
+	// readline => id, left, top, right, bottom 
 	//RUN RIGHT
 	sprites->Add(10001, 25, 24, 44, 59, texBill);
 	sprites->Add(10002, 90, 27, 110, 58, texBill);
@@ -233,6 +233,9 @@ HWND CreateGameWindow(HINSTANCE hInstance, int nCmdShow, int ScreenWidth, int Sc
 
 	RegisterClassEx(&wc);
 
+	RECT wr = { 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT };    // set the size, but not the position
+	AdjustWindowRect(&wr, WS_OVERLAPPEDWINDOW, FALSE);    // adjust the size
+
 	HWND hWnd =
 		CreateWindow(
 			WINDOW_CLASS_NAME,
@@ -240,8 +243,8 @@ HWND CreateGameWindow(HINSTANCE hInstance, int nCmdShow, int ScreenWidth, int Sc
 			WS_OVERLAPPEDWINDOW, // WS_EX_TOPMOST | WS_VISIBLE | WS_POPUP,
 			CW_USEDEFAULT,
 			CW_USEDEFAULT,
-			ScreenWidth,
-			ScreenHeight,
+			wr.right - wr.left,    // width of the window
+			wr.bottom - wr.top,
 			NULL,
 			NULL,
 			hInstance,
