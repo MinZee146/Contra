@@ -34,7 +34,6 @@ HOW TO INSTALL Microsoft.DXSDK.D3DX
 #include "Map.h"
 #include "Animation.h"
 #include "Animations.h"
-
 #include "SampleKeyEventHandler.h"
 
 #include "Bill.h"
@@ -176,6 +175,13 @@ void Update(DWORD dt)
 	// Demo
 	bill->Update(dt);
 	map->Update(dt, bill);
+	float cx, cy;
+	bill->GetPosition(cx, cy);
+	cx -= SCREEN_WIDTH / 2;
+	cy = 0;
+	if (cx < 0)
+		cx = 0;
+	CGame::GetInstance()->SetCamPos(cx, cy);
 }
 
 /*
