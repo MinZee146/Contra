@@ -14,7 +14,7 @@ void CBill::Update(DWORD dt) {
 	if (nx < 0) {
 		vx = -BILL_RUN_SPEED;
 	}
-	if (vx > 0 && x > 290) x = 290;
+	if (vx > 0 && x >3150) x = 3150;
 	if (vx < 0 && x < 0) x = 0;
 }
 void CBill::Render()

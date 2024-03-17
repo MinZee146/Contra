@@ -29,6 +29,7 @@ public:
 	float GetSpeedVy() { return vy; }
 	float GetX() { return x; }
 	float GetY() { return y; }
+	void GetPosition(float& x, float& y) { x = this->x; y = this->y; }
 
 	virtual void Update(DWORD dt) = 0;
 	virtual void Render() = 0;

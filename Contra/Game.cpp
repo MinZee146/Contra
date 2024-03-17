@@ -124,6 +124,13 @@ void CGame::Init(HWND hWnd, HINSTANCE hInstance)
 
 	return;
 }
+//Camera
+void CGame::SetPointSamplerState()
+{
+	pD3DDevice->VSSetSamplers(0, 1, &pPointSamplerState);
+	pD3DDevice->GSSetSamplers(0, 1, &pPointSamplerState);
+	pD3DDevice->PSSetSamplers(0, 1, &pPointSamplerState);
+}
 
 /*
 	Draw the whole texture or part of texture onto screen
