@@ -1,6 +1,9 @@
 #pragma once
 #include <d3d10.h>
 #include <d3dx10.h>
+
+#define TEXTURES_DIR L"Texture"
+
 class CTexture {
 protected:
 	ID3D10Texture2D* _tex;

@@ -2,9 +2,6 @@
 
 #include <Windows.h>
 
-/*
-	Abstract class to define keyboard event handlers
-*/
 class CKeyEventHandler
 {
 public:

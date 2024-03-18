@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include <d3dx10.h>
 #include <vector>
-
+#include "Textures.h"
 
 using namespace std;
 
@@ -33,6 +33,7 @@ public:
 
 	virtual void Update(DWORD dt) = 0;
 	virtual void Render() = 0;
+	virtual void LoadResource() = 0;
 
 	~CGameObject();
 };

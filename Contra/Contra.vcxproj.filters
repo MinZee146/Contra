@@ -13,93 +13,150 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Animations&amp;Texture">
+      <UniqueIdentifier>{bd2f937c-f0b8-4d55-913b-5d2ae6384baa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameManager">
+      <UniqueIdentifier>{3a8d00d5-3d61-481e-8269-77c102f912b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameManager\GameObjects">
+      <UniqueIdentifier>{b8e7711b-0813-42be-9366-8912bc7b9eab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System">
+      <UniqueIdentifier>{a685450b-8726-44df-99af-4469e3974a9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Animations&amp;Texture">
+      <UniqueIdentifier>{70ebbcc6-686d-4452-9d29-ae813da95634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameManager">
+      <UniqueIdentifier>{1c835c7e-3789-41b0-b6ba-73eb9283ccde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameManager\GameObjects">
+      <UniqueIdentifier>{5968c2ee-15ad-4bea-a7f0-9c2d133376e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameManager\GameObjects\Bill">
+      <UniqueIdentifier>{4923aa21-ed83-4ee9-b863-c75f166e7256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\KeyInputManager">
+      <UniqueIdentifier>{a81bdc79-4d2a-40f5-9f62-32e67c895256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KeyInputManager">
+      <UniqueIdentifier>{4b39056c-af87-49c6-8ea6-2c9232c946ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MapManager">
+      <UniqueIdentifier>{f104a0d3-a398-4e06-94af-7fbd75bb305a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ScreenManager">
+      <UniqueIdentifier>{c71da747-bfd5-41d6-9e2e-7cbecc2e01c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameManager\GameObjects\Bill">
+      <UniqueIdentifier>{5b82e28e-4680-4494-b6f9-f5603b7ea13f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameManager\MapsManager">
+      <UniqueIdentifier>{cdecc698-ac2c-4b77-aa9a-64d71df0fc37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Contra.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Textures.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprites.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Animation.h">
+      <Filter>Header Files\Animations&amp;Texture</Filter>
     </ClInclude>
     <ClInclude Include="AnimationFrame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Animation.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Animations&amp;Texture</Filter>
     </ClInclude>
     <ClInclude Include="Animations.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Animations&amp;Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files\Animations&amp;Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Textures.h">
+      <Filter>Header Files\Animations&amp;Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Header Files\Animations&amp;Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprites.h">
+      <Filter>Header Files\Animations&amp;Texture</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\GameManager\GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="Bill.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\GameManager</Filter>
     </ClInclude>
     <ClInclude Include="KeyEventHandler.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\KeyInputManager</Filter>
     </ClInclude>
     <ClInclude Include="SampleKeyEventHandler.h">
+      <Filter>Header Files\KeyInputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Maps.h">
+      <Filter>Header Files\MapManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Bill.h">
+      <Filter>Header Files\GameManager\GameObjects\Bill</Filter>
+    </ClInclude>
+    <ClInclude Include="BillStats.h">
+      <Filter>Header Files\GameManager\GameObjects\Bill</Filter>
+    </ClInclude>
+    <ClInclude Include="Contra.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1Map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Map.h">
+    <ClInclude Include="ScreenManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Contra.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Textures.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sprite.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sprites.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Animation.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Animations&amp;Texture</Filter>
     </ClCompile>
     <ClCompile Include="Animations.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Animations&amp;Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Source Files\Animations&amp;Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprites.cpp">
+      <Filter>Source Files\Animations&amp;Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Textures.cpp">
+      <Filter>Source Files\Animations&amp;Texture</Filter>
     </ClCompile>
     <ClCompile Include="Bill.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\GameManager\GameObjects\Bill</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files\GameManager</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\GameManager\GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="SampleKeyEventHandler.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\KeyInputManager</Filter>
     </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ScreenManager.cpp">
+      <Filter>Source Files\ScreenManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Maps.cpp">
+      <Filter>Source Files\GameManager\MapsManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1Map.cpp">
+      <Filter>Source Files\GameManager\MapsManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Contra.cpp">
+      <Filter>Source Files\ScreenManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

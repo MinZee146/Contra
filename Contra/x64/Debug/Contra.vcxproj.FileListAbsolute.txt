@@ -1,3 +1,1 @@
-D:\C#\Contra\Contra\Contra\x64\Debug\Contra.vcxproj.CopyComplete
-D:\ASP.NET\Contra\Contra\Contra\x64\Debug\Contra.vcxproj.CopyComplete
-D:\Downloads\GitHub\Contra\Contra\Contra\x64\Debug\Contra.vcxproj.CopyComplete
+C:\Users\Admin\OneDrive\Documents\Tài liệu\IT\GameDev\ContraCD - Copy\Contra\Contra\x64\Debug\Contra.vcxproj.Up2Date
